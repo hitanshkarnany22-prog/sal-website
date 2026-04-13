@@ -1,1 +1,390 @@
+<!DOCTYPE html>
 
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Manrope:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary-fixed": "#1b1d0e",
+              "primary-fixed": "#ffe088",
+              "on-surface-variant": "#4d4635",
+              "surface": "#faf9f6",
+              "secondary-fixed-dim": "#c8c8b0",
+              "secondary-fixed": "#e4e4cc",
+              "on-error": "#ffffff",
+              "error": "#ba1a1a",
+              "outline-variant": "#d0c5af",
+              "surface-container-highest": "#e3e2e0",
+              "on-error-container": "#93000a",
+              "on-secondary-fixed-variant": "#474836",
+              "primary-container": "#d4af37",
+              "secondary": "#5e604d",
+              "on-primary-fixed-variant": "#574500",
+              "on-tertiary-fixed-variant": "#27438a",
+              "primary": "#735c00",
+              "on-background": "#1a1c1a",
+              "outline": "#7f7663",
+              "tertiary-fixed-dim": "#b4c5ff",
+              "tertiary-container": "#97b0ff",
+              "on-surface": "#1a1c1a",
+              "surface-container": "#efeeeb",
+              "on-tertiary": "#ffffff",
+              "tertiary": "#415ba4",
+              "surface-dim": "#dbdad7",
+              "inverse-on-surface": "#f2f1ee",
+              "on-secondary": "#ffffff",
+              "surface-bright": "#faf9f6",
+              "surface-container-high": "#e9e8e5",
+              "tertiary-fixed": "#dbe1ff",
+              "error-container": "#ffdad6",
+              "inverse-primary": "#e9c349",
+              "on-tertiary-fixed": "#00174b",
+              "on-tertiary-container": "#254188",
+              "primary-fixed-dim": "#e9c349",
+              "on-secondary-container": "#636451",
+              "on-primary": "#ffffff",
+              "surface-container-lowest": "#ffffff",
+              "background": "#faf9f6",
+              "secondary-container": "#e1e1c9",
+              "on-primary-container": "#554300",
+              "surface-container-low": "#f4f3f1",
+              "inverse-surface": "#2f312f",
+              "on-primary-fixed": "#241a00",
+              "surface-tint": "#735c00",
+              "surface-variant": "#e3e2e0"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+      body { font-family: 'Manrope', sans-serif; }
+      h1, h2, h3, .serif { font-family: 'Noto Serif', serif; }
+      .glass-effect { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+      .gold-gradient { background: linear-gradient(135deg, #735c00 0%, #d4af37 100%); }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-white/60 dark:bg-stone-900/60 backdrop-blur-xl shadow-sm shadow-amber-900/5">
+<div class="flex justify-between items-center px-8 py-4 max-w-screen-2xl mx-auto">
+<div class="font-serif text-2xl italic text-stone-900 dark:text-stone-50">Your Salon</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-serif text-lg tracking-tight text-amber-700 dark:text-amber-500 border-b border-amber-700/30 pb-1" href="#">Experience</a>
+<a class="font-serif text-lg tracking-tight text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 transition-colors" href="#">About</a>
+<a class="font-serif text-lg tracking-tight text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 transition-colors" href="#">Services</a>
+<a class="font-serif text-lg tracking-tight text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 transition-colors" href="#">Gallery</a>
+<a class="font-serif text-lg tracking-tight text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 transition-colors" href="#">Reviews</a>
+</div>
+<button class="gold-gradient text-on-primary px-6 py-2 rounded-sm font-label text-sm uppercase tracking-widest hover:opacity-90 transition-all active:scale-95">
+                Book Now
+            </button>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative h-screen flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="Elegant luxury salon interior with gold accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzU1WaRhcbUAOU5WAZmBPF-Vh9gNpIMfwm1ixmOVwQv-VWik-c1-4-wm4OZuj2eqhBZmrgM2uY9B2ijACMOERRLtRwbzLyLOVIG4UtMj97ckqucbLQtBDCs9-5i6U4bTlRs5lw5UzUpwv45XVzy5Uytr2e7u_E8IoiQqdnP7ZjJ6m48KwzkdsslttRkK0LG7Ha-ncN06pINWGK7U3hVcb5NrFPhRNFcFoHyPsP0pkPzImc4fPJIldnWS8HTGQTnE8mKnGPfr4a4WWq"/>
+<div class="absolute inset-0 bg-stone-900/30"></div>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-8 w-full">
+<div class="max-w-2xl bg-white/10 backdrop-blur-md p-12 border-l-4 border-primary-container">
+<h1 class="text-5xl md:text-7xl text-white mb-6 leading-tight">Experience Luxury Beauty &amp; Care</h1>
+<p class="text-xl text-stone-100 mb-8 font-light leading-relaxed">Premium salon services designed to make you look and feel your best, curated within a sanctuary of modern elegance.</p>
+<a class="inline-flex items-center gap-3 gold-gradient text-on-primary px-8 py-4 rounded-sm font-label text-sm uppercase tracking-[0.2em] hover:shadow-xl transition-all" href="https://wa.me/">
+                    Book Appointment
+                    <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-24 bg-surface px-8">
+<div class="max-w-7xl mx-auto grid md:grid-cols-12 gap-16 items-center">
+<div class="md:col-span-5 relative">
+<div class="aspect-[4/5] bg-surface-container-high p-4">
+<img class="w-full h-full object-cover shadow-2xl" data-alt="Stylist working on hair in premium salon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXNYk_-QjjJWTnXCnq3CQvFKAPZEUxA9CemiKNyBFubzs7XTB4M_KRRXCxR9Xv50sO8GmIfrJAOT1BmhRJCjiAWi_R3UuT7ItutUYPXGNIWQcs74KZisc7jJao_ih4CENpnUCjrIGVahQk5SSUkthE3mtj7nBp-_3Th7WCzLwK-poRT1tub6btEEz7FxHIPYZlSKfLoLPnQ2ucHpzd-gwiyEbxk-Nfaqt1KAe0FtS6rzknbJONDK2j92Dzg4J829AukBI55IhZowCk"/>
+</div>
+<div class="absolute -bottom-8 -right-8 w-48 h-48 bg-primary-container/20 -z-10"></div>
+</div>
+<div class="md:col-span-7">
+<span class="font-label text-xs uppercase tracking-[0.3em] text-primary mb-4 block">The Sanctuary</span>
+<h2 class="text-4xl md:text-5xl mb-8 leading-tight">Elevated Standards in Personal Grooming</h2>
+<div class="space-y-6 text-on-surface-variant font-body text-lg leading-relaxed">
+<p>At Your Salon, we believe beauty is an intentional practice. Our sanctuary is founded on the pillars of surgical-grade hygiene, professional mastery, and an unwavering commitment to your personal narrative.</p>
+<p>Every treatment is a bespoke experience, tailored to the unique geometry of your features and the rhythm of your lifestyle. We don't just provide services; we curate confidence.</p>
+</div>
+<div class="mt-12 flex gap-12 items-center">
+<div>
+<div class="text-3xl font-serif text-primary">15+</div>
+<div class="font-label text-[10px] uppercase tracking-widest">Years of Artistry</div>
+</div>
+<div class="w-px h-12 bg-outline-variant/30"></div>
+<div>
+<div class="text-3xl font-serif text-primary">100%</div>
+<div class="font-label text-[10px] uppercase tracking-widest">Sterile Protocol</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-24 bg-surface-container-low px-8">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-20">
+<h2 class="text-4xl md:text-5xl mb-4">Our Curated Services</h2>
+<div class="h-1 w-24 bg-primary-container mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Haircut -->
+<div class="bg-surface p-8 group hover:bg-surface-container-highest transition-all duration-500">
+<div class="text-primary mb-6 transition-transform group-hover:scale-110 duration-500">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'wght' 200;">content_cut</span>
+</div>
+<h3 class="text-xl mb-4">Haircut &amp; Styling</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed mb-6">Precision cuts and artistic styling that reflect your individual character and modern trends.</p>
+<span class="font-label text-[10px] uppercase tracking-widest text-primary border-b border-primary/20 pb-1">Explore Style</span>
+</div>
+<!-- Hair Spa -->
+<div class="bg-surface p-8 group hover:bg-surface-container-highest transition-all duration-500">
+<div class="text-primary mb-6 transition-transform group-hover:scale-110 duration-500">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'wght' 200;">spa</span>
+</div>
+<h3 class="text-xl mb-4">Hair Spa &amp; Treatments</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed mb-6">Deep restorative rituals designed to nourish the scalp and revitalize every fiber of your hair.</p>
+<span class="font-label text-[10px] uppercase tracking-widest text-primary border-b border-primary/20 pb-1">View Rituals</span>
+</div>
+<!-- Facial -->
+<div class="bg-surface p-8 group hover:bg-surface-container-highest transition-all duration-500">
+<div class="text-primary mb-6 transition-transform group-hover:scale-110 duration-500">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'wght' 200;">face_6</span>
+</div>
+<h3 class="text-xl mb-4">Facial &amp; Skincare</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed mb-6">Advanced dermatological treatments for a luminous, healthy glow that radiates from within.</p>
+<span class="font-label text-[10px] uppercase tracking-widest text-primary border-b border-primary/20 pb-1">See Therapy</span>
+</div>
+<!-- Bridal -->
+<div class="bg-surface p-8 group hover:bg-surface-container-highest transition-all duration-500">
+<div class="text-primary mb-6 transition-transform group-hover:scale-110 duration-500">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'wght' 200;">auto_fix_high</span>
+</div>
+<h3 class="text-xl mb-4">Bridal &amp; Makeup</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed mb-6">Exquisite artistry for your most significant moments. Elegant, timeless, and uniquely you.</p>
+<span class="font-label text-[10px] uppercase tracking-widest text-primary border-b border-primary/20 pb-1">Wedding Menu</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Choose Us -->
+<section class="py-24 px-8 overflow-hidden">
+<div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
+<div>
+<span class="font-label text-xs uppercase tracking-[0.3em] text-primary mb-4 block">The Distinction</span>
+<h2 class="text-4xl md:text-5xl mb-8">Why Discerning Clients Choose Us</h2>
+<div class="grid sm:grid-cols-2 gap-8">
+<div class="space-y-3">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-xl">verified</span>
+<h4 class="font-bold text-sm tracking-wide">Experienced Staff</h4>
+</div>
+<p class="text-sm text-on-surface-variant leading-relaxed">Our artisans are trained globally, bringing world-class techniques to your chair.</p>
+</div>
+<div class="space-y-3">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-xl">shopping_bag</span>
+<h4 class="font-bold text-sm tracking-wide">Premium Products</h4>
+</div>
+<p class="text-sm text-on-surface-variant leading-relaxed">We exclusively use eco-conscious, luxury professional brands for superior results.</p>
+</div>
+<div class="space-y-3">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-xl">sanitizer</span>
+<h4 class="font-bold text-sm tracking-wide">Hygienic Environment</h4>
+</div>
+<p class="text-sm text-on-surface-variant leading-relaxed">Surgical-grade sterilization protocols for all tools and surfaces, every single time.</p>
+</div>
+<div class="space-y-3">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-xl">payments</span>
+<h4 class="font-bold text-sm tracking-wide">Value Alignment</h4>
+</div>
+<p class="text-sm text-on-surface-variant leading-relaxed">Transparent pricing that reflects the ultra-premium quality and expertise provided.</p>
+</div>
+</div>
+</div>
+<div class="relative">
+<div class="grid grid-cols-2 gap-4">
+<img class="w-full h-80 object-cover mt-12 shadow-lg" data-alt="Salon aesthetic decor and tools" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzj2rF7cVJq2zRHHCJLqMGCYPnXT3jLnOG3xwJyGOzVC73nXo4lUuCYWT6uyF-Fr-4USoo1P4QlKfvPqmhGLuWnw3Tkz69raiVZx6hzobv968tc7xRqF_uWoHwNLs8zw0s6zYCu_yO-qfw8m61i9VTgdTNcBH6EZ5McehrlMhceErja7R4AcYQx03jXZMPAkktjJgNRoV492wi3iiqssDRelnSJPhg3eSGnbCJqB8070kQsKEEa6BgOCJUog4zzwdmu0icRz0lBFt1"/>
+<img class="w-full h-80 object-cover shadow-lg" data-alt="Detailed professional hair styling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfH7EWKbse3pUByGFYO3ZgERZHN4zr2QnTTCtgqkazz8QTl7RqJ-22BuWUwXtIa26kkw63Tiz92YFilv1vow3Zo5V5SmZAm1av9oLK0s7YPtnTzPAgMfzWyTFqyc_5mKqGK-IIkda2qKRgEDIgnPGNgSpi6YJbhwe4AddJjdDvuHiMlTRzyhllWkpwlgCGo4edUxHOScupH02sYDL7Ndwb_50TijWWsUK30DDcfzYBkt-K9gs8crrd1t-7EfYKczpvp5HRSFWLyHi_"/>
+</div>
+<div class="absolute inset-0 bg-primary/5 -m-12 -z-10"></div>
+</div>
+</div>
+</section>
+<!-- Gallery Section -->
+<section class="py-24 bg-surface px-8">
+<div class="max-w-7xl mx-auto">
+<div class="flex justify-between items-end mb-16">
+<div class="max-w-md">
+<h2 class="text-4xl mb-4">The Gallery</h2>
+<p class="text-on-surface-variant text-sm">A glimpse into the transformations and the atmosphere we cultivate.</p>
+</div>
+<button class="font-label text-xs uppercase tracking-[0.2em] border-b-2 border-primary-container pb-2">View Full Collection</button>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="col-span-2 row-span-2">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="Close up of luxury hair styling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBoM5oighjWRaUzns63PLmP9h_BeMviA-4lpJ1WN4QthyRNs_-8bVtDngfoXDXPLlTr3RYpH_hgVFHoj6YTSAkQrB__Xn4YFvgWHdVovftUuP1m02ZiKP0ponZkhyot-mWSvBie62b4o2yB-onahUTUDyfA-O7XnJetX8ZBUCRgWkXGCsr5_faTD8O_14dG4dv5gWbxK5m4T5SDIKs6q6S6S1s0yl_4_jZZY0HyJrq5Dd3uH_AZThFdU20zuK5UdATbH8ZM0arZQ1k5"/>
+</div>
+<div>
+<img class="w-full h-64 object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="Modern salon interior design" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyh9Eu1TvouLB4I3Vp3PRvRzNL6y6nd-qKMw_K9ZI7l-RyPlzntW2nexg4TLZJXvdKh_IDDJ1zKyV_V6J_x8Trpzy9A7NFEFXbciTY-jS2gaNfYLolO0dZw5CW0egGLpm2Xm1401rEYDSnGk6ILvmGNqpCk47E9TEkWWJU4dGQxk_HKj9L_AU8lCSNNge4UFjm0yJqi03IC19RtmGFwnYEA9XnRB766vJDD9-taHByUtXS6MI7utZcgQPa2kAfovgYfgWUZ0PCIm9x"/>
+</div>
+<div>
+<img class="w-full h-64 object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="High-quality, professional modern male hairstyle in a luxury salon setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqJBWdZ4ueoCoK1u27rJ9YdvhnpO70vuK3OtCXL-4qY1cljPrlAcjS9p1f27dsSlQR_jS05l43jGQCpWJRloA44yMv4iEU-C-XWHggoC9OZMhEhZkBIlASShn_8qy2BRtzdC34haSxOA6aXX143iguKidtQeXEMyIPup4QUdy18eJ3HZm3VmSo36fLYwLxDPxPPs2aQ1JR1-vEJUgL27l-cPih_ip1sPqe6O2aUeJ8mCbBZ4v3nErdAmAE6d-flagWO6eFu67ZBLZn"/>
+</div>
+<div class="col-span-2">
+<img class="w-full h-64 object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="Bridal makeup transformation" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9Enf0GsLHpkvnq-oT594Njr3Q3O9LkxL8P_OF1lqnjfjABSBDcvc2MFu4T7_R6oftCZ5ob5E7CJT3YmKUaORahsx6JdEJHUHVtZDwC7LiV5OiPxgBFaE1FkliZo-IfPR0gD2eb9Z3cTocfYMUQnQ6kW5YmkkUdFaDMB2wD8MjvNZbPJAYdIY3Mbcb282ogjWBNRFOxAs-cI51XbQXNw5uWKYMBPMhm5lC_0kX10uB-RyT850dsQM52fY6l0-jq0_XpvtV6tR9xtGH"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-24 bg-surface-container px-8">
+<div class="max-w-4xl mx-auto text-center">
+<span class="material-symbols-outlined text-primary-container text-6xl mb-8">format_quote</span>
+<div class="space-y-16">
+<!-- Single Testimonial (Rotating feel) -->
+<div>
+<p class="text-2xl md:text-3xl italic font-serif leading-relaxed mb-8">"An unparalleled experience. From the moment I stepped inside, the attention to detail and the sheer professionalism of the staff made me feel like royalty. My hair has never looked better."</p>
+<div class="flex flex-col items-center">
+<span class="font-label text-sm uppercase tracking-widest font-bold">Helena Montgomery</span>
+<span class="text-xs text-on-surface-variant">Vogue Editorial Stylist</span>
+</div>
+</div>
+<!-- Mini Grid for others -->
+<div class="grid md:grid-cols-2 gap-12 pt-16 border-t border-outline-variant/30">
+<div class="text-left">
+<p class="text-on-surface-variant mb-4">"The hygiene standards are what truly set them apart. Every tool was opened fresh, and the space was immaculate. A true luxury haven."</p>
+<span class="font-bold text-xs uppercase tracking-widest">— Sarah J.</span>
+</div>
+<div class="text-left">
+<p class="text-on-surface-variant mb-4">"Bespoke is the right word. They listened to exactly what I wanted and executed it with precision I haven't found elsewhere."</p>
+<span class="font-bold text-xs uppercase tracking-widest">— Julian R.</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-24 px-8 bg-surface">
+<div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16">
+<div class="space-y-12">
+<div>
+<h2 class="text-4xl mb-4">Find Us</h2>
+<p class="text-on-surface-variant">Step into the sanctuary. Reservations recommended.</p>
+</div>
+<div class="space-y-8">
+<div class="flex items-start gap-6">
+<div class="bg-primary/10 p-3">
+<span class="material-symbols-outlined text-primary">location_on</span>
+</div>
+<div>
+<h4 class="font-bold mb-1">Our Location</h4>
+<p class="text-on-surface-variant text-sm">122 Luxury Row, Downtown Design District, New York</p>
+</div>
+</div>
+<div class="flex items-start gap-6">
+<div class="bg-primary/10 p-3">
+<span class="material-symbols-outlined text-primary">call</span>
+</div>
+<div>
+<h4 class="font-bold mb-1">Inquiries</h4>
+<p class="text-on-surface-variant text-sm">+1 (234) 567 8900</p>
+</div>
+</div>
+<div class="flex items-start gap-6">
+<div class="bg-primary/10 p-3">
+<span class="material-symbols-outlined text-primary">schedule</span>
+</div>
+<div>
+<h4 class="font-bold mb-1">Open Hours</h4>
+<p class="text-on-surface-variant text-sm">Mon - Sat: 09:00 AM - 08:00 PM<br/>Sun: 10:00 AM - 05:00 PM</p>
+</div>
+</div>
+</div>
+<a class="inline-flex items-center gap-4 bg-[#25D366] text-white px-8 py-4 rounded-sm font-label text-sm uppercase tracking-widest hover:opacity-90 transition-all w-full md:w-auto justify-center" href="https://wa.me/">
+<span class="material-symbols-outlined">chat</span>
+                    Message via WhatsApp
+                </a>
+</div>
+<div class="h-[500px] bg-surface-container relative group overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" data-alt="Map view of salon location in luxury district" data-location="New York" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7Dm8kduLj8P7cUqsI6DE90C4E6sfc1S4wAw38YPE40tKiqgYXhljiRyRfsp4qA51je-nxkmRUESaQFb--K-DgC8fOBzx3RosN3_JGtb0UUHS0UgRXJvhzS27ajB7adh2s69MlBeQ5DEYHBvVY0wJUDW9yc94ubnFhwrWRfzsjEglixSPZmisTSfYAW2aHYiDYbEv0kTYRUntTotHbKmQZ1-4bKx2ADqlI1alBdSCwdZshDHJUSox8_W0PsBRORPVTPDtYwwmEk5Zd"/>
+<div class="absolute inset-0 bg-primary/10 pointer-events-none"></div>
+<div class="absolute bottom-6 left-6 bg-white p-6 shadow-xl max-w-xs">
+<h4 class="font-serif italic text-lg mb-2">Visit the Sanctuary</h4>
+<p class="text-xs text-on-surface-variant leading-relaxed">Located in the heart of the design district, easily accessible with private valet parking available.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-stone-100 dark:bg-stone-950 w-full py-12 px-8">
+<div class="flex flex-col md:flex-row justify-between items-start gap-8 max-w-7xl mx-auto">
+<div class="space-y-4">
+<div class="font-serif text-xl text-stone-800 dark:text-stone-200">Your Salon</div>
+<p class="max-w-xs text-stone-500 dark:text-stone-500 font-sans text-sm tracking-wide lowercase">the curated sanctuary for the modern individual.</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-12">
+<div class="space-y-4">
+<span class="font-label text-sm tracking-widest uppercase text-amber-800 dark:text-amber-600 block">Contact</span>
+<ul class="space-y-2 text-stone-500 dark:text-stone-500 text-sm">
+<li><a class="hover:text-amber-600 transition-colors" href="#">Phone</a></li>
+<li><a class="hover:text-amber-600 transition-colors" href="#">WhatsApp</a></li>
+<li><a class="hover:text-amber-600 transition-colors" href="#">Location</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<span class="font-label text-sm tracking-widest uppercase text-amber-800 dark:text-amber-600 block">Legal</span>
+<ul class="space-y-2 text-stone-500 dark:text-stone-500 text-sm">
+<li><a class="hover:text-amber-600 transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-amber-600 transition-colors" href="#">Terms</a></li>
+</ul>
+</div>
+<div class="space-y-4 md:col-span-2">
+<span class="font-label text-sm tracking-widest uppercase text-amber-800 dark:text-amber-600 block">Newsletter</span>
+<div class="flex">
+<input class="bg-transparent border-b border-stone-300 dark:border-stone-800 py-2 focus:outline-none focus:border-amber-700 w-full text-sm" placeholder="email@address.com" type="email"/>
+<button class="material-symbols-outlined text-amber-700 ml-2">east</button>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-stone-200 dark:bg-stone-800 h-px w-full my-8 max-w-7xl mx-auto"></div>
+<div class="max-w-7xl mx-auto text-center md:text-left">
+<span class="font-sans text-xs tracking-widest uppercase text-stone-500 dark:text-stone-500">© 2024 Your Salon. The Curated Sanctuary.</span>
+</div>
+</footer>
+<!-- Floating Booking Bar (Mobile Only) -->
+<div class="md:hidden fixed bottom-0 w-full glass-effect bg-white/80 p-4 border-t border-primary/10 z-50 flex justify-between items-center">
+<div>
+<span class="text-[10px] uppercase tracking-widest text-primary block">Instant Booking</span>
+<span class="font-bold text-sm">Ready for your ritual?</span>
+</div>
+<a class="gold-gradient text-on-primary px-6 py-2 rounded-sm font-label text-xs uppercase tracking-widest" href="https://wa.me/">
+            Book
+        </a>
+</div>
+</body></html>
